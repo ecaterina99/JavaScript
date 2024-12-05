@@ -14,18 +14,31 @@
     
     <h1>Hello, world</h1>
      <button onclick=" changeBackground() ">Change</button>
-<script>
-
-function changeBackground() {
-var response = document.getElementsByTagName("body");
-
-var body=response[0];
-
-body.style.backgroundColor="red";
-}
 
 
-</script>
+     <script>
+
+        var darkTheme=false
+        
+        function changeBackground() {
+        var response = document.getElementsByTagName("body");
+        var body=response[0];
+        var h1=document.getElementsByTagName("h1")[0];
+        if(darkTheme==false){
+            body.style.backgroundColor="red";
+            darkTheme=true;
+            h1.style.color="white"
+        }
+        else{
+            body.style.backgroundColor="aquamarine";
+            darkTheme=false;
+             h1.style.color="black"
+        }
+        }
+        
+        
+        
+        </script>
 
 </body>
 </html>
