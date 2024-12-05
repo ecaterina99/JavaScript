@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>List Item</h1>
+
+<input type="text" name="todoItem" id="" placeholder="Insert the text..">
+<button onclick=" addListItem() ">Add a list item</button>
+
+    <ol>
+    </ol>
+
+  
+<script>
+
+var input= document.getElementsByName("todoItem")[0];
+
+        function addListItem() {
+
+         if(input.value !=""){
+                var ol=document.getElementsByTagName("ol")[0];
+                var newLi=document.createElement("li")             
+                newLi.innerHTML=input.value
+                ol.appendChild(newLi);
+            }
+
+         else{
+            alert("Insert the text!")
+          }
+        }
+        
+        
+</script>
+
+</body>
+</html>
